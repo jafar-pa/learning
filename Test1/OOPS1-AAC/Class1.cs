@@ -53,7 +53,7 @@ namespace OOPS1_AAC
 
         public Employee(string name, int id, Address address)
         {
-            _name = name;_id = id;_address = address;
+            _name = name;_id = 1;_address = address;
         }
     }
     class TestAggregation
