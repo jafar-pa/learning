@@ -39,7 +39,7 @@ namespace OOPS1_AAC
     class Address
     {
         string _city, _zip;
-        public Address(string city , string zip)
+        public Address(string city, string zip)
         {
             _city = city;
             _zip = zip;
@@ -53,7 +53,7 @@ namespace OOPS1_AAC
 
         public Employee(string name, int id, Address address)
         {
-            _name = name;_id = 1;_address = address;
+            _name = name; _id = 1; _address = address;
         }
     }
     class TestAggregation
@@ -90,4 +90,68 @@ namespace OOPS1_AAC
     {
 
     }
+
+    /// <summary>
+    /// encapsulation is all about protecting invariants and hiding of implementation details
+    /// classes, properties and access modifiers are tools to provide encapsulation in c#.
+    /// </summary>
+    public class Encapsulation
+    {
+        private string name;
+        public string Name
+        {
+            get
+            {
+                return name;
+            }
+            set
+            {
+                name = "Jafar" + value;
+            }
+        }
+    }
+
+    /// <summary>
+    /// Encapsulation is more about hiding the details, whereas abstraction is more about generalizing the details
+    /// Interfaces, abstract classes or inheritance and polymorphism are tools to provide abstraction in c#
+    /// </summary>
+    class Abstarction { }
+
+    /// Abstraction and Encapsulation are confusing terms and dependent on each other.
+    /// Let's take it by an example: ref:https://stackoverflow.com/questions/16938667/how-abstraction-and-encapsulation-differ
+
+    public class Person
+    {
+        private int Id { get; set; }
+        private string Name { get; set; }
+        private string CustomName()
+        {
+            //return true == true ? "" : "";
+            return "Name:- " + Name + " and Id is:- " + Id;
+        }
+    }
+
+    /// <summary>
+    /// When you created Person class, 
+    /// you did encapsulation by writing properties and functions together(Id, Name, CustomName). 
+    /// You perform abstraction when you expose this class to client as
+    /// //Person p = new Person();
+    /// p.CustomName();
+    //Your client doesn't know anything about Id and Name in this function. Now if, your client wants to know the last name as well without disturbing the function call. You do encapsulation by adding one more property into Person class like this.
+    //Look, even after addding an extra property in class, your client doesn't know what you did to your code. This is where you did abstraction.
+
+
+    /// </summary>
+
+    public class Person1
+    {
+        private int Id { get; set; }
+        private string Name { get; set; }
+        private string LastName { get; set; }
+        public string CustomName()
+        {
+            return "Name:- " + Name + " and Id is:- " + Id + "last name:- " + LastName;
+        }
+    }
+
 }

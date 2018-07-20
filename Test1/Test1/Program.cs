@@ -1,9 +1,11 @@
-﻿using System;
+﻿using OOPS1_AAC;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+
 
 namespace Test1
 {
@@ -14,7 +16,9 @@ namespace Test1
             //Dictionary<string, int> = new Dictionary<string, int>();
             //1. reverse  sentence  // hey you Bub = Bub! you, Hey
             Reverse("Hello Jafar Hru?");
-
+            Encapsulation encapsulation = new Encapsulation();
+            encapsulation.Name = "k";
+            var name = encapsulation.Name;
             var s = MonoalphabeticEncryption("the", 5);
             var ss = ToLong("three");
             Sample sample = new Sample();
