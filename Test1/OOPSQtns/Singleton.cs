@@ -9,19 +9,16 @@ namespace OOPSQtns
     /// <summary>
     /// article about constructors
     /// https://www.codeproject.com/Articles/7011/An-Intro-to-Constructors-in-C
+    /// 
+    /// singleton vs static:
+    /// Singleton objects are stored in Heap, but static objects are stored in stack.
+    ///We can clone(if the designer did not disallow it) the singleton object, 
+    ///but we can not clone the static class object .
+    ///Singleton classes follow the OOP(object oriented principles), static classes do not.
+    ///We can implement an interface with a Singleton class,
+    ///but a class's static methods (or e.g. a C# static class) cannot. 
     /// </summary>
-    class OOPS :Singleton
-    {
-        public OOPS()
-        {
-            //var single = Singleton.singleton;
-            
-            Console.ReadLine();
-        }
-        
-    }
-    /// <summary>
-    /// singleton vs static
+    /// singleton
     /// </summary>
     public class Singleton
     {
@@ -32,7 +29,7 @@ namespace OOPSQtns
         {
             Console.WriteLine("static");
         }
-        protected Singleton()
+        private Singleton()
         {
             Console.WriteLine("protect");
         }
@@ -49,7 +46,6 @@ namespace OOPSQtns
                 }                
             }
             return _singleton;
-        }
-        
+        }        
     }
 }

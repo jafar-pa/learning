@@ -1,6 +1,7 @@
 ﻿using OOPS1_AAC;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -15,7 +16,61 @@ namespace Test1
         {
             //Dictionary<string, int> = new Dictionary<string, int>();
             //1. reverse  sentence  // hey you Bub = Bub! you, Hey
-            Reverse("Hello Jafar Hru?");
+            string line = "sdf";
+            int burger_letters_com = 0, d104_aa_net = 0, unicomp6_unicomp_net = 0;
+            int hostcount = 0;
+            StreamReader sr = new StreamReader("C:\\GitDemo\\Sample.txt");
+            if (string.IsNullOrEmpty(line))
+            {
+
+            }
+            line = sr.ReadLine();
+            string hostname = string.Empty;
+            Dictionary<string, int> dic= new Dictionary<string, int>();
+            while (line != null)
+            {
+                //write the lie to console window
+                Console.WriteLine(line);
+                //Read the next line
+                //line = sr.ReadLine();
+
+                if ((line = sr.ReadLine()) != null)
+                {
+                    hostname = line.Split('[')[0].ToString(); 
+                    if (line.Contains(hostname) == true)
+                    {
+                        hostcount++;
+                    }
+                    int val = 0;
+                    dic.TryGetValue(hostname, out val);
+                    if (val == 0)
+                    {
+                        dic.Add(hostname, hostcount);
+                    }
+                    else
+                        dic[hostname] = val + hostcount;
+
+                    hostcount = 0;
+
+                    //else if (line.Contains("d104.aa.net") == true)
+                    //{
+                    //    d104_aa_net++;
+                    //}
+                    //else if (line.Contains("unicomp6.unicomp.net") == true)
+                    //{
+                    //    unicomp6_unicomp_net++;
+                    //}
+                    //else { }
+                }                
+            }
+            
+
+            //close the file
+            sr.Close();
+            Console.ReadLine();
+        
+
+        Reverse("Hello Jafar Hru?");
             Encapsulation encapsulation = new Encapsulation();
             encapsulation.Name = "k";
             var name = encapsulation.Name;

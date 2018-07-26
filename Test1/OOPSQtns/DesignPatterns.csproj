@@ -42,7 +42,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="OOPS.cs" />
+    <Compile Include="AbstractFactoryPattern.cs" />
+    <Compile Include="FactoryPatterns.cs" />
+    <Compile Include="Singleton.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

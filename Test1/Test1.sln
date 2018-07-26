@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test1", "Test1\Test1.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OOPS1-AAC", "OOPS1-AAC\OOPS1-AAC.csproj", "{9ED2DFA2-1160-43B9-A23C-614928F7A1D4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OOPSQtns", "OOPSQtns\OOPSQtns.csproj", "{5AB903EC-68E5-4D9B-9288-BCEBEDD7A6A8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesignPatterns", "OOPSQtns\DesignPatterns.csproj", "{5AB903EC-68E5-4D9B-9288-BCEBEDD7A6A8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
