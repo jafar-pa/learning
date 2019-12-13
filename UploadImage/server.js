@@ -27,4 +27,5 @@ app.post('/upload', upload.single('photo'), (req, res) => {
 
 app.listen(PORT, () => {
     console.log('Listening at ' + PORT );
+    console.log('domain: '+__dirname);
 });
